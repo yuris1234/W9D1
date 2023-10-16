@@ -1,5 +1,7 @@
 import MovingObject from "./moving_object"
+import Asteroid from "./asteroid";
 window.MovingObject = MovingObject;
+window.Asteroid = Asteroid;
 
 document.addEventListener("DOMContentLoaded", () => {
     const myCanvas = document.getElementById('game-canvas');
@@ -13,10 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
         radius: 20,
         color: "red"
     });
+
+    const ast = new Asteroid({ pos: [30, 30] });
     
     mo.draw(ctx);
-    setTimeout(() => {
-        mo.move();
-        mo.draw(ctx);
-    }, 5000)
+    ast.draw(ctx);
 });
