@@ -7,9 +7,10 @@ class Asteroid extends MovingObject {
     static COLOR = 'red';
 
     constructor(options) {
+        super(options);
         this.pos = options['pos'];
         this.vel = Util.randomVec();
-        super();
+        // super();
     }
 }
 

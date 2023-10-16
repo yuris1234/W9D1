@@ -13,10 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
         pos: [300, 300],
         vel: [100, 100],
         radius: 20,
-        color: "red"
+        color: "black"
     });
 
-    const ast = new Asteroid({ pos: [30, 30] });
+    const ast = new Asteroid({ pos: [100, 100],
+        vel: [100, 100],
+        radius: 20,
+        color: "red" });
     
     mo.draw(ctx);
     ast.draw(ctx);
