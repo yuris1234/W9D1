@@ -9,11 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const mo = new MovingObject({
         pos: [300, 300],
-        vel: [10, 10],
-        radius: 20
-        ,
-        color: "#00FF00"
-      });
+        vel: [100, 100],
+        radius: 20,
+        color: "red"
+    });
     
-      mo.draw(ctx);
+    mo.draw(ctx);
+    setTimeout(() => {
+        mo.move();
+        mo.draw(ctx);
+    }, 5000)
 });
